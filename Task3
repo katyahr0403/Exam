@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main()
+{
+    double a, b, x;
+    char action;
+    std::cin >> action >> a >> b;
+    while ((action == '/'&& b!=0) || (action != '/' && b != 0)) {
+        if (action == '+') {
+            x = a + b;
+            std::cout << "= " << x << "\n";
+        }
+        else if (action == '-') {
+            x = a - b;
+            std::cout << "= " << x << "\n";
+        }
+        else if (action == '*') {
+            x = a * b;
+            std::cout << "= " << x << "\n";
+        }
+        else if (action == '/') {
+            x = a / b;
+            std::cout << "= " << x << "\n";
+        }
+        std::cin >> action >> a >> b;
+        
+    }
+    std::cout << "\n";
+}
